@@ -42,3 +42,48 @@ int[] GetArray(int size, int minValue, int maxValue)
     }
     return res;
 }*/
+//Задача 37: Найдите произведение пар чисел в одномерном массиве. Парой считаем первый 
+//и последний элемент, второй и предпоследний и т.д. Результат запишите в новом массиве.
+//[1 2 3 4 5]-> 5 8 3  [6 7 3 6]-> 36 21
+/*int[] array = GetArray(8, 0, 10);
+Console.WriteLine($"[{String.Join(", ", array)}]");
+if(array.Length%2! == 0){
+int[] arrayNew1 = GetArrayMult1(array);
+Console.WriteLine($"[{String.Join(", ", arrayNew1)}]");}
+else{
+int[] arrayNew2 = GetArrayMult2(array);
+Console.WriteLine($"[{String.Join(", ", arrayNew2)}]");
+}
+//Метод1--------------------------------------------------------
+int[] GetArray(int size, int minValue, int maxValue)
+{
+    int[] res = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        res[i] = new Random().Next(minValue, maxValue);
+    }
+    return res;
+}
+//Метод2--------------------------------------------------------
+int[] GetArrayMult1 (int[] array)
+{
+    int[] result = new int[array.Length / 2];
+    for (int i = 0; i < array.Length - i; i++)
+    {
+        result[i] = array[i] * array[array.Length - 1 - i];
+    }
+    return result;
+}
+//Метод3--------------------------------------------------------
+int[] GetArrayMult2 (int[] array)
+{
+    int[] result = new int[(array.Length/2)+1];
+    for (int i = 0; i < array.Length + 1 - i; i++)
+    {
+        if(i == array.Length/2) result[i] = array[(array.Length/2)] * 1;
+        else result[i] = array[i] * array[array.Length - 1 - i];   
+        }
+       return result;
+    }*/
+    
+
